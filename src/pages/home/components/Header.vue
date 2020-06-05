@@ -30,8 +30,12 @@ export default {
     background-color: $bgColor
     color: #fff
     .header-back
-      width: .64rem
+      width: .80rem
       text-align: center
+      .back-icon
+      margin-top .1rem
+        font-size: .36rem
+        line-height: .80rem
     .header-search
       flex: 1
       padding: 0 .2rem
@@ -40,10 +44,9 @@ export default {
       background-color #fff
       border-radius: .1rem
       margin-top: .12rem
-      margin-left: .2rem
       height: .62rem
     .header-city
-      width: 1.24rem
+      width: 1.28rem
       text-align: center
       .arrow-icon
         margin-left: -.04rem
