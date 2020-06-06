@@ -2,7 +2,7 @@
   <div class="container">
     <swiper ref="mySwiper" :options="swiperOptions">
       <swiper-slide v-for="item in swiperList" :key="item.id">
-        <img class="swiper-img" :src="item.imgUrl" :alt="'轮播图' + item.id">
+        <img class="swiper-img" :src="item.imgUrl" :alt="'轮播图广告' + item.id">
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
@@ -22,9 +22,10 @@ export default {
         loop: true
       },
       swiperList: [
-        { id: '0001', imgUrl: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e893a3037ff23b6323be104722deb1c4.jpg?thumb=1&w=720&h=360' },
-        { id: '0003', imgUrl: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/1b234526fb88c62fb3c643cfa79bb560.jpg?thumb=1&w=720&h=360' },
-        { id: '0002', imgUrl: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/8e5387cbaae9677837756b9590bd0e34.jpg?thumb=1&w=720&h=360' }
+        { id: '0001', imgUrl: 'https://source.qunarzz.com/site/images/wns/20200519_qunar_dujia_banner_750x192_2.jpg' },
+        { id: '0002', imgUrl: 'https://source.qunarzz.com/site/images/wns/20200601_qunar_dujia_750x192_3.jpg' },
+        { id: '0003', imgUrl: 'https://source.qunarzz.com/site/images/wns/20200604_qunar_dujia_banner750x192_4.jpg' },
+        { id: '0004', imgUrl: 'https://source.qunarzz.com/site/images/wns/20200602_qunar_dujia_homepage_750x192_6.jpg' }
       ]
     }
   }
@@ -37,7 +38,8 @@ export default {
   .container
     width: 100%
     height: 0
-    padding-bottom: 50%
+    padding-bottom: 25.6%
+    overflow: hidden
     .swiper-img
       width: 100%
 </style>
