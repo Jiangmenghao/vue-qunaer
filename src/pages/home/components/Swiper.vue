@@ -2,7 +2,7 @@
   <div class="container">
     <swiper ref="mySwiper" :options="swiperOptions">
       <swiper-slide v-for="item in swiperList" :key="item.id">
-        <img class="swiper-img" :src="item.imgUrl" :alt="'slider' + item.id">
+        <img class="swiper-img" :src="item.imgUrl" :alt="'轮播图' + item.id">
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
@@ -36,8 +36,8 @@ export default {
       background-color: #fff
   .container
     width: 100%
-    min-height: 3.74rem
-    background-color #eee
+    height: 0
+    padding-bottom: 50%
     .swiper-img
       width: 100%
 </style>
