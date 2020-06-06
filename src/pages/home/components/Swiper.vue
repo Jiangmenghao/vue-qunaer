@@ -20,7 +20,10 @@ export default {
           el: '.swiper-pagination'
         },
         loop: true,
-        autoplay: {delay: 3000}
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false
+        }
       },
       swiperList: [
         { id: '0001', imgUrl: 'https://source.qunarzz.com/site/images/wns/20200519_qunar_dujia_banner_750x192_2.jpg' },
