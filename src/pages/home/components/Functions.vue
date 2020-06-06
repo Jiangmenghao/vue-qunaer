@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <swiper>
+    <swiper ref="mySwiper" :options="swiperOptions">
       <swiper-slide v-for="(page, index) in pages" :key="index">
         <div class="functions-area">
           <div class="function" v-for="item in page" :key="item.id">
@@ -10,6 +10,9 @@
         </div>
       </swiper-slide>
     </swiper>
+    <div class="pagination-wrapper">
+      <div class="function-swiper-pagination" slot="pagination"></div>
+    </div>
   </div>
 </template>
 
@@ -18,6 +21,11 @@ export default {
   name: 'HomeFunctions',
   data () {
     return {
+      swiperOptions: {
+        pagination: {
+          el: '.function-swiper-pagination'
+        }
+      },
       functionList: [{
         id: '001',
         imgUrl: 'https://imgs.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
@@ -85,11 +93,22 @@ export default {
   @import '~styles/variables.styl'
   @import '~styles/mixins.styl'
   .container
+    /deep/ .swiper-pagination-bullet
+      margin: 0 .08rem
+      width: .12rem
+      height: .12rem
+      background-color: $bgColor
+  .container
     height: 3.8rem
+    .pagination-wrapper
+      height: .6rem
+      display: flex
+      justify-content: center
+      align-items center
     .functions-area
       display: flex
       flex-wrap: wrap
-      height: 3.8rem
+      height: 3.2rem
       .function
         display: flex
         flex-direction: column
