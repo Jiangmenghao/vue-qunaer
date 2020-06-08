@@ -93,11 +93,15 @@ export default {
   @import '~styles/variables.styl'
   @import '~styles/mixins.styl'
   .container
-    /deep/ .swiper-pagination-bullet
-      margin: 0 .08rem
-      width: .12rem
-      height: .12rem
-      background-color: $bgColor
+    /deep/
+      .swiper-pagination-bullets
+        display: flex
+        align-items: center
+        .swiper-pagination-bullet
+          margin: 0 .08rem
+          width: .12rem
+          height: .12rem
+          background-color: $bgColor
   .container
     height: 3.8rem
     .pagination-wrapper
