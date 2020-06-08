@@ -2,7 +2,7 @@
   <div>
     <div class="header">
       <div class="header-back">
-        <span class="iconfont back-icon">&#xe635;</span>
+        <a class="iconfont back-icon">&#xe635;</a>
       </div>
       <div class="header-search">
         <span class="iconfont">&#xe665;</span>
@@ -33,9 +33,11 @@ export default {
       width: .80rem
       text-align: center
       .back-icon
-      margin-top .1rem
+        display: block
+        color: #fff
+        margin-top: .26rem
         font-size: .36rem
-        line-height: .80rem
+        line-height: .36rem
     .header-search
       flex: 1
       padding: 0 .2rem

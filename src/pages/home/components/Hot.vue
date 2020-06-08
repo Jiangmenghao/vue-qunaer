@@ -10,7 +10,7 @@
         </div>
         <ul class="hot-list">
           <li class="list-item" v-for="item in topList" :key="item.id">
-            <a class="list-item-fulllink" href="item.linkTo">
+            <a class="list-item-fulllink" :href="item.linkTo">
               <div class="top-tag" v-if="!(item.tagImg==='')">
                 <img class="top-tag-img" :src="item.tagImg" :alt="'TopTag'+item.id">
               </div>
