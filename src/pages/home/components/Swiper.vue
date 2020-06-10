@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <swiper ref="mySwiper" :options="swiperOptions">
-      <swiper-slide v-for="item in swiperList" :key="item.id">
+    <swiper ref="mySwiper" :options="swiperOptions" v-if="showSwiper">
+      <swiper-slide v-for="item in list" :key="item.id">
         <img class="swiper-img" :src="item.imgUrl" :alt="'轮播图广告' + item.id">
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
@@ -13,6 +13,9 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    list: Array
+  },
   data () {
     return {
       swiperOptions: {
@@ -24,13 +27,12 @@ export default {
           delay: 3000,
           disableOnInteraction: false
         }
-      },
-      swiperList: [
-        { id: '0001', imgUrl: 'https://source.qunarzz.com/site/images/wns/20200519_qunar_dujia_banner_750x192_2.jpg' },
-        { id: '0002', imgUrl: 'https://source.qunarzz.com/site/images/wns/20200601_qunar_dujia_750x192_3.jpg' },
-        { id: '0003', imgUrl: 'https://source.qunarzz.com/site/images/wns/20200604_qunar_dujia_banner750x192_4.jpg' },
-        { id: '0004', imgUrl: 'https://source.qunarzz.com/site/images/wns/20200602_qunar_dujia_homepage_750x192_6.jpg' }
-      ]
+      }
+    }
+  },
+  computed: {
+    showSwiper () {
+      return this.list.length
     }
   }
 }
