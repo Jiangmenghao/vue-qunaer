@@ -3,7 +3,7 @@
     <div class="price-desc">
       <span class="price-desc-icon iconfont info">&#xe65a;</span>
       <div class="price-desc-info">
-        <span>票面价</span>是指通过景区指定窗口售卖的纸质门票上标注的价格
+        <span class="high-light">票面价</span>是指通过景区指定窗口售卖的纸质门票上标注的价格
       </div>
     </div>
   </div>
@@ -33,4 +33,6 @@ export default {
       .price-desc-info
         margin-left: .06rem
         line-height: .32rem
+        .high-light
+          font-weight: bold
 </style>

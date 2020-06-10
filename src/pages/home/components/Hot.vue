@@ -150,6 +150,7 @@ export default {
         height: 3.08rem
         white-space: nowrap
         overflow-x: scroll
+        overflow-y: hidden
         padding: 0 .24rem
         .list-item
           display: inline-block
