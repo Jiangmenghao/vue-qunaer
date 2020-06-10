@@ -207,6 +207,7 @@ export default {
               ellipsis()
     .like-list-more
       display: block
+      background-color: #fff
       padding: .2rem 0
       font-size: .28rem
       line-height: .4rem
