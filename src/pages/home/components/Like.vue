@@ -12,7 +12,7 @@
             <div class="info-title">{{ item.title }}</div>
             <div class="info-comments">
               <span class="stars">
-                <span class="iconfont star-on" v-for="(i, index) in item.stars" :key="index">&#xe66b;</span><span class="iconfont star-on star-off" v-for="(i, index) in (5-item.stars)" :key="index">&#xe66b;</span>
+                <span class="iconfont star-on" v-for="(i, index) in item.stars" :key="index">&#xe66b;</span><span class="iconfont star-on star-off" v-for="(i, index) in (5-item.stars)" :key="index+5">&#xe66b;</span>
               </span>
               <span class="info-comments-text">{{ item.comments + '条评论' }}</span>
             </div>
