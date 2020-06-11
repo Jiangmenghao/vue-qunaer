@@ -7,11 +7,13 @@
       <div class="header-search">
         <span class="iconfont">&#xe665;</span>
         <span>输入城市/景点/游玩主题</span>
+      </div>
+      <router-link to="/city">
+        <div class="header-city">
+          <span>{{ city }}</span>
+          <span class="iconfont arrow-icon">&#xe639;</span>
         </div>
-      <div class="header-city">
-        <span>{{ city }}</span>
-        <span class="iconfont arrow-icon">&#xe639;</span>
-        </div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -33,7 +35,7 @@ export default {
     background-color: $bgColor
     color: #fff
     .header-back
-      width: .80rem
+      width: .8rem
       text-align: center
       .back-icon
         display: block
@@ -53,6 +55,7 @@ export default {
     .header-city
       width: 1.28rem
       text-align: center
+      color: #fff
       .arrow-icon
         margin-left: -.04rem
 </style>
