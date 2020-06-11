@@ -10,46 +10,13 @@
       <div class="area">
         <div class="title">热门城市</div>
         <ul class="city-list">
-          <li class="city-list-item">重庆</li>
-          <li class="city-list-item">重庆</li>
-          <li class="city-list-item">重庆</li>
-          <li class="city-list-item">重庆</li>
-          <li class="city-list-item">重庆</li>
-          <li class="city-list-item">重庆</li>
-          <li class="city-list-item">重庆</li>
-          <li class="city-list-item">重庆</li>
-          <li class="city-list-item">重庆</li>
-          <li class="city-list-item">重庆</li>
+          <li class="city-list-item" v-for="city in hot" :key="city.id">{{ city.name }}</li>
         </ul>
       </div>
-      <div class="area">
-        <div class="title">A</div>
+      <div class="area" v-for="(alphabetValue, key) in all" :key="key">
+        <div class="title">{{ key }}</div>
         <ul class="az-list">
-          <li class="az-list-item border-bottom">阿克苏</li>
-          <li class="az-list-item border-bottom">阿克苏</li>
-          <li class="az-list-item border-bottom">阿克苏</li>
-          <li class="az-list-item border-bottom">阿克苏</li>
-          <li class="az-list-item border-bottom">阿克苏</li>
-        </ul>
-      </div>
-      <div class="area">
-        <div class="title">A</div>
-        <ul class="az-list">
-          <li class="az-list-item border-bottom">阿克苏</li>
-          <li class="az-list-item border-bottom">阿克苏</li>
-          <li class="az-list-item border-bottom">阿克苏</li>
-          <li class="az-list-item border-bottom">阿克苏</li>
-          <li class="az-list-item border-bottom">阿克苏</li>
-        </ul>
-      </div>
-      <div class="area">
-        <div class="title">A</div>
-        <ul class="az-list">
-          <li class="az-list-item border-bottom">阿克苏</li>
-          <li class="az-list-item border-bottom">阿克苏</li>
-          <li class="az-list-item border-bottom">阿克苏</li>
-          <li class="az-list-item border-bottom">阿克苏</li>
-          <li class="az-list-item border-bottom">阿克苏</li>
+          <li class="az-list-item border-bottom" v-for="cities in alphabetValue" :key="cities.id">{{ cities.name }}</li>
         </ul>
       </div>
     </div>
@@ -60,6 +27,10 @@
 import Bscroll from 'better-scroll'
 export default {
   name: 'CityList',
+  props: {
+    hot: Array,
+    all: Object
+  },
   mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper)
   }
