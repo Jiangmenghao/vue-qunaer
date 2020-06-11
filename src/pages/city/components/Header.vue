@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~styles/variables.styl'
+  @import '~styles/variables.styl'
   .header
     display: flex
     font-size: .32rem
