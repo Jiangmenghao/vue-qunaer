@@ -13,7 +13,7 @@
           <li class="city-list-item" v-for="city in hot" :key="city.id">{{ city.name }}</li>
         </ul>
       </div>
-      <div class="area" v-for="(alphabetValue, key) in all" :key="key">
+      <div class="area" v-for="(alphabetValue, key) in all" :key="key" :ref="key">
         <div class="title">{{ key }}</div>
         <ul class="az-list">
           <li class="az-list-item border-bottom" v-for="cities in alphabetValue" :key="cities.id">{{ cities.name }}</li>
@@ -29,10 +29,17 @@ export default {
   name: 'CityList',
   props: {
     hot: Array,
-    all: Object
+    all: Object,
+    clickedLetter: String
   },
   mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper)
+  },
+  watch: {
+    clickedLetter () {
+      let el = this.$refs[this.clickedLetter][0]
+      this.scroll.scrollToElement(el)
+    }
   }
 }
 </script>

@@ -2,8 +2,8 @@
   <div>
     <city-header></city-header>
     <city-search></city-search>
-    <city-list :hot="hotCities" :all="allCities"></city-list>
-    <city-alphabet :az="alphabet"></city-alphabet>
+    <city-list :hot="hotCities" :all="allCities"  :clickedLetter="clickedLetter"></city-list>
+    <city-alphabet :az="alphabet" @letter-change="changeTheLetter"></city-alphabet>
   </div>
 </template>
 
@@ -25,7 +25,8 @@ export default {
     return {
       hotCities: [],
       allCities: {},
-      alphabet: []
+      alphabet: [],
+      clickedLetter: ''
     }
   },
   methods: {
@@ -39,6 +40,9 @@ export default {
         this.allCities = resData.data.cities
         this.alphabet = resData.data.alphabet
       }
+    },
+    changeTheLetter (l) {
+      this.clickedLetter = l
     }
   },
   mounted () {
