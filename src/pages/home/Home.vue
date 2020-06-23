@@ -20,6 +20,7 @@ import HomeLikeList from './components/Like'
 import HomeWeekend from './components/Weekend'
 import HomeDesc from './components/Desc'
 import HomeFooter from './components/Footer'
+import store from '../../store'
 import axios from 'axios'
 export default {
   name: 'Home',
@@ -35,12 +36,16 @@ export default {
   },
   data () {
     return {
-      city: '',
       swiperList: [],
       functionList: [],
       topList: [],
       likeList: [],
       weekendList: []
+    }
+  },
+  computed: {
+    city () {
+      return store.store.state.city
     }
   },
   methods: {
@@ -53,7 +58,6 @@ export default {
     },
     gotHomeData (resData) {
       if (resData.ret && resData.data) {
-        this.city = resData.data.city
         this.swiperList = resData.data.swiperList
         this.functionList = resData.data.functionList
         this.topList = resData.data.topList

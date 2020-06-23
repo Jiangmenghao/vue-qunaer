@@ -53,7 +53,8 @@ export default {
       margin-top: .12rem
       height: .62rem
     .header-city
-      width: 1.28rem
+      min-width: 1.08rem
+      padding: 0 .1rem
       text-align: center
       color: #fff
       .arrow-icon

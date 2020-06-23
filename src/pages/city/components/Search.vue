@@ -5,7 +5,7 @@
     </div>
     <div class="search-content" v-show="keyword" ref="search">
       <ul>
-        <li class="search-content-item border-bottom" v-for="city in searchResult" :key="city.id">{{ city.name }}</li>
+        <li class="search-content-item border-bottom" v-for="city in searchResult" :key="city.id" @click="selectCity(city.name)">{{ city.name }}</li>
         <li class="search-content-item border-bottom" v-show="isNoResult">找不到匹配城市</li>
       </ul>
     </div>
@@ -14,6 +14,7 @@
 
 <script>
 import Bscroll from 'better-scroll'
+import store from '../../../store'
 export default {
   name: 'CitySearch',
   props: {
@@ -24,6 +25,12 @@ export default {
       keyword: '',
       searchResult: [],
       timer: null
+    }
+  },
+  methods: {
+    selectCity (city) {
+      store.store.setCity(city)
+      this.$router.push('/')
     }
   },
   mounted () {

@@ -10,13 +10,13 @@
       <div class="area">
         <div class="title">热门城市</div>
         <ul class="city-list">
-          <li class="city-list-item" v-for="city in hot" :key="city.id">{{ city.name }}</li>
+          <li class="city-list-item" v-for="city in hot" :key="city.id" @click="selectCity(city.name)">{{ city.name }}</li>
         </ul>
       </div>
       <div class="area" v-for="(alphabetValue, key) in all" :key="key" :ref="key">
         <div class="title">{{ key }}</div>
         <ul class="az-list">
-          <li class="az-list-item border-bottom" v-for="cities in alphabetValue" :key="cities.id">{{ cities.name }}</li>
+          <li class="az-list-item border-bottom" v-for="cities in alphabetValue" :key="cities.id" @click="selectCity(cities.name)">{{ cities.name }}</li>
         </ul>
       </div>
     </div>
@@ -25,12 +25,19 @@
 
 <script>
 import Bscroll from 'better-scroll'
+import store from '../../../store'
 export default {
   name: 'CityList',
   props: {
     hot: Array,
     all: Object,
     clickedLetter: String
+  },
+  methods: {
+    selectCity (city) {
+      store.store.setCity(city)
+      this.$router.push('/')
+    }
   },
   mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper)
