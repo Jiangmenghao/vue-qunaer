@@ -1,6 +1,7 @@
+import Vue from 'vue'
 import state from './state'
 
-let store = {
+const store = Vue.observable({
   debug: true,
   state,
   setCity (newValue) {
@@ -12,8 +13,8 @@ let store = {
       console.error(e)
     }
   }
-}
+})
 
 export default {
-  store: store
+  store
 }
