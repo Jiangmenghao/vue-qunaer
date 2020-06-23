@@ -21,6 +21,7 @@ import HomeWeekend from './components/Weekend'
 import HomeDesc from './components/Desc'
 import HomeFooter from './components/Footer'
 import axios from 'axios'
+import { mapState } from 'vuex'
 export default {
   name: 'Home',
   components: {
@@ -35,6 +36,7 @@ export default {
   },
   data () {
     return {
+      lastCity: '',
       swiperList: [],
       functionList: [],
       topList: [],
@@ -42,9 +44,12 @@ export default {
       weekendList: []
     }
   },
+  computed: {
+    ...mapState(['city'])
+  },
   methods: {
     getHomeData () {
-      axios.get('/api/index.json')
+      axios.get('/api/index.json?city=' + this.city)
         .then(response => this.gotHomeData(response.data))
         .catch(e => {
           console.Error(e)
@@ -61,7 +66,14 @@ export default {
     }
   },
   mounted () {
+    this.lastCity = this.city
     this.getHomeData()
+  },
+  activated () {
+    if (this.lastCity !== this.city) {
+      this.lastCity = this.city
+      this.getHomeData()
+    }
   }
 }
 </script>
