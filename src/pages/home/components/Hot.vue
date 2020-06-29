@@ -9,7 +9,7 @@
           <a class="hot-title-all-link" href="http://touch.piao.qunar.com/touch/weekHotSales.htm?cityName=%E9%87%8D%E5%BA%86">全部榜单<span class="iconfont arrow-right">&#xe636;</span></a>
         </div>
         <ul class="hot-list">
-          <li class="list-item" v-for="item in list" :key="item.id">
+          <router-link tag="li" class="list-item" v-for="item in list" :key="item.id" :to="'/detail/' + item.id">
             <a class="list-item-fulllink" :href="item.linkTo">
               <div class="top-tag" v-if="!(item.tagImg==='')">
                 <img class="top-tag-img" :src="item.tagImg" :alt="'TopTag'+item.id">
@@ -21,7 +21,7 @@
               <div class="price">
                 <span class="price-number">¥{{ item.price }}</span>起</div>
             </a>
-          </li>
+          </router-link>
         </ul>
       </div>
   </div>
