@@ -67,6 +67,7 @@ export default {
     background-color: $bgColor
     color: #fff
     text-align: center
+    z-index: 1
     .back-icon
       width: .8rem
       color: #fff

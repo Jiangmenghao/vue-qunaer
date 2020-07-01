@@ -54,7 +54,7 @@ export default {
     flex-direction: column
     justify-content: center
     background-color: #000
-    z-index: 1
+    z-index: 2
     .wrapper
       width: 100%
       .gallary-img
