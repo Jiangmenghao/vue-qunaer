@@ -4,13 +4,13 @@
       <div class="multi-data">
         <div>
           <div class="info">
-            <span class="info-score">4.9</span>
+            <span class="info-score">{{ score }}</span>
             <span class="info-text">分</span>
-            <span class="info-desc">很棒</span>
+            <span class="info-desc">{{ desc }}</span>
           </div>
           <div class="info-more">
-            <span class="info-comment">570条评论</span>
-            <span class="info-strategy">4条攻略</span>
+            <span class="info-comment">{{ numC }}条评论</span>
+            <span class="info-strategy">{{ numS }}条攻略</span>
           </div>
         </div>
         <span class="iconfont arrow-right">&#xe636;</span>
@@ -25,7 +25,7 @@
     </div>
     <div class="baseinfo-address">
       <span class="iconfont address-icon">&#xe65b;</span>
-      <div class="address-text">重庆市北碚区北温泉公园</div>
+      <div class="address-text">{{ add }}</div>
       <span class="iconfont arrow-right">&#xe636;</span>
     </div>
   </div>
@@ -33,7 +33,14 @@
 
 <script>
 export default {
-  name: 'DetailBaseinfo'
+  name: 'DetailBaseinfo',
+  props: {
+    score: String,
+    desc: String,
+    numC: Number,
+    numS: Number,
+    add: String
+  }
 }
 </script>
 
