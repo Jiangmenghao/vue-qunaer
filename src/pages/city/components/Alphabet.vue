@@ -4,6 +4,7 @@
       :key="item"
       :ref="item"
       @click="letterClicked"
+      @touchstart.prevent
       @touchmove="touchMove"
     >{{ item }}</li>
   </ul>

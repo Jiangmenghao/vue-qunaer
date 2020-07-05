@@ -2,11 +2,11 @@
   <li class="list-item border-bottom">
     <div class="list-item-title">
       <h5 class="item-name">{{ type.type }}</h5>
-      <div class="item-right">
+      <div class="item-right" @click="isRotate = !isRotate">
         <div class="item-price">
           ¥<span class="price-num">{{ type.price }}</span>起
         </div>
-        <span class="iconfont arrow-icon" :class="{ up : isRotate }" @click="isRotate = !isRotate">&#xe637;</span>
+        <span class="iconfont arrow-icon" :class="{ up : isRotate }">&#xe637;</span>
       </div>
     </div>
     <fade-animation>
