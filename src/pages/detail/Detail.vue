@@ -3,10 +3,8 @@
     <detail-banner :title="title" :bannerImg="bannerImg" :gallaryImgs="gallaryImgs"></detail-banner>
     <detail-header></detail-header>
     <detail-baseinfo :score="score" :desc="desc" :numC="numberOfComments" :numS="numberOfStrategy" :add="address"></detail-baseinfo>
-    <div class="content">
-      <detail-promote></detail-promote>
-      <detail-ticket></detail-ticket>
-    </div>
+    <detail-promote></detail-promote>
+    <detail-ticket></detail-ticket>
   </div>
 </template>
 
@@ -68,6 +66,5 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  .content
-    height: 30rem
+
 </style>

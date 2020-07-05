@@ -7,20 +7,21 @@
           <div class="ticket-light">
             <span class="desctag">
               <img class="ticket-tagicon" src="https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20202/6489a65436e6dd60420dae78f46d25d6.png" alt="">
-              16:00前随买随用
+              {{ item.desc || "16:00前随买随用" }}
             </span>
           </div>
           <div class="ticket-labelcon">
-            <span class="ticket-label">
+            <span class="ticket-label" v-show="!item.supplier">
               <img class="ticket-tagicon" src="https://img1.qunarzz.com/piao/fusion/1804/b0/c3cf2897c74ecc02.png" alt="">
               自营
             </span>
+            <span class="ticket-label" v-show="item.supplier">无需换票</span>
             <span class="ticket-label">
-              条件退
+              {{ item.supplier ? "随时退" : "条件退"}}
             </span>
           </div>
           <div class="ticket-supplier">
-            <span>去哪儿直销</span>
+            <span>{{ item.supplier || "去哪儿直销"}}</span>
             <span class="ticket-infobtn border-left">预订须知</span>
             <span class="iconfont arrow-right">&#xe636;</span>
           </div>

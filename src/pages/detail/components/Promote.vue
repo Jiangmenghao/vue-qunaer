@@ -28,6 +28,7 @@ export default {
 
 <style lang="stylus" scoped>
   @import '~styles/variables.styl'
+  @import '~styles/mixins.styl'
   .container
     background-color: #eee
     padding: .2rem 0
@@ -35,9 +36,5 @@ export default {
       background-color: #fff
       padding: 0 .16rem .3rem
       .promote-title
-        font-size: .4rem
-        font-weight: bold
-        line-height: .56rem
-        color: $darkTextColor
-        padding: .32rem 0 0 .04rem
+        title()
 </style>
