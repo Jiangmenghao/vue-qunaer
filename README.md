@@ -39,9 +39,11 @@ npm run start
 
 ## 截图
 
-<img src="./demo-imgs/screenshot/home.png" width="200px" alt="截图-主页"/>
-<img src="./demo-imgs/screenshot/like.png" width="200px" alt="截图-猜你喜欢"/>
-<img src="./demo-imgs/screenshot/weekend.png" width="200px" alt="截图-周末去哪儿"/>
+<p>
+  <img src="./demo-imgs/screenshot/home.png" width="200px" alt="截图-主页"/>
+  <img src="./demo-imgs/screenshot/like.png" width="200px" alt="截图-猜你喜欢"/>
+  <img src="./demo-imgs/screenshot/weekend.png" width="200px" alt="截图-周末去哪儿"/>
+</p>
 
 ## 动态展示
 ### 首页
