@@ -47,17 +47,23 @@ npm run start
 
 ## 动态展示
 ### 首页
-<img src="./demo-imgs/gif/轮播展示.gif" width="200px" alt="组件-轮播"/>
-<img src="./demo-imgs/gif/热门榜单展示.gif" width="200px" alt="组件-榜单"/>
+<p>
+  <img src="./demo-imgs/gif/轮播展示.gif" width="200px" alt="组件-轮播"/>
+  <img src="./demo-imgs/gif/热门榜单展示.gif" width="200px" alt="组件-榜单"/>
+</p>
 
 ### 城市选择页
-<img src="./demo-imgs/gif/城市页展示.gif" width="200px" alt="组件-城市页面"/>
-<img src="./demo-imgs/gif/城市搜索展示.gif" width="200px" alt="组件-城市搜索"/>
+<p>
+  <img src="./demo-imgs/gif/城市页展示.gif" width="200px" alt="组件-城市页面"/>
+  <img src="./demo-imgs/gif/城市搜索展示.gif" width="200px" alt="组件-城市搜索"/>
+</p>
 
 ### 景点详情页
-<img src="./demo-imgs/gif/详情页-图片展示.gif" width="200px" alt="组件-详情页图片"/>
-<img src="./demo-imgs/gif/详情页-header展示.gif" width="200px" alt="组件-详情页header"/>
-<img src="./demo-imgs/gif/详情页-二级菜单展示.gif" width="200px" alt="组件-详情页二级菜单"/>
+<p>
+  <img src="./demo-imgs/gif/详情页-图片展示.gif" width="200px" alt="组件-详情页图片"/>
+  <img src="./demo-imgs/gif/详情页-header展示.gif" width="200px" alt="组件-详情页header"/>
+  <img src="./demo-imgs/gif/详情页-二级菜单展示.gif" width="200px" alt="组件-详情页二级菜单"/>
+</p>
 
 ## 作者
 
